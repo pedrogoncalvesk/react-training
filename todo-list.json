@@ -1,0 +1,15 @@
+[
+  {
+    "description": "Task 1",
+    "checked": true
+  },
+  {
+    "description": "Task 2",
+    "checked": false
+  },
+  {
+    "description": "Task 3",
+    "checked": false
+  }
+]
+
