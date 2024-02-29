@@ -4,26 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const App3 = () => (
-  <div>
-    <h1>Olá, mundoss!</h1>
-  </div>
-);
-
-function App2(props) {
-  console.log(props)
-  return (
-    <div>
-      <h1>Olá, {props.name}!</h1>
-    </div>
-  );
-}
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App3 /> */}
-    <App2 name="Pedro" xpto="123123" abcd={2} />
+    <App />
   </React.StrictMode>
 );
 
