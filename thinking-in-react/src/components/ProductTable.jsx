@@ -1,5 +1,5 @@
-import ProductCategoryRow from "./ProductCategoryRow";
-import ProductRow from "./ProductRow";
+import ProductCategoryRow from './ProductCategoryRow';
+import ProductRow from './ProductRow';
 
 export default function ProductTable({ products }) {
   const rows = [];

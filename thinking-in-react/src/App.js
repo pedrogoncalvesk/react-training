@@ -1,4 +1,4 @@
-import FilterableProductTable from 'components/FilterableProductTable';
+import FilterableProductTable from './components/FilterableProductTable';
 
 const PRODUCTS = [
   { category: 'Fruits', price: '$1', stocked: true, name: 'Apple' },

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import SearchBar from 'components/SearchBar';
-import ProductTable from 'components/ProductTable';
+import SearchBar from './SearchBar';
+import ProductTable from './ProductTable';
 
 export default function FilterableProductTable({ products, productsLength }) {
   const [searchBarValue, setSearchBarValue] = useState('Produto xpto');
