@@ -1,26 +1,26 @@
-import { useState } from "react";
+import { useFormInput } from "./useFormInput";
 
-export default function SearchBar({ defaultValue }) {
-  const [value, setValue] = useState(defaultValue);
+export default function SearchBar({ defaultValue, onChange }) {
+  const [inputValue, setInputValue] = useFormInput(defaultValue);
 
-  // const onChange = (e) => {
-  //   console.log(e.target.value)
-  //   setValue(e.target.value);
-  // }
-
-  const onSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
-    console.log('onSubmit', value);
-    setValue(e.target.value);
+    onChange(e.target[0].value);
+  };
+
+  const handleBlur = e => {
+    e.preventDefault();
+    onChange(e.target.value);
   };
 
   return (
-    <form style={{ display: 'flex', flexFlow: 'column' }} onSubmit={onSubmit}>
+    <form style={{ display: 'flex', flexFlow: 'column' }} onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Search..."
-        // onChange={onChange}
-        onBlur={onSubmit}
+        onChange={setInputValue}
+        onBlur={handleBlur}
+        value={inputValue}
         defaultValue={defaultValue}
       />
       <label>

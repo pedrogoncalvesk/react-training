@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import FilterableProductTable from './components/FilterableProductTable';
 
 const PRODUCTS = [
@@ -10,6 +11,13 @@ const PRODUCTS = [
 ];
 
 export default function App() {
+  const [products, setProducts] = useState([]);
 
-  return <FilterableProductTable products={PRODUCTS} productsLength={PRODUCTS.length} />;
+  useEffect(() => {
+    setTimeout(() => {
+      setProducts(PRODUCTS);
+    }, 1000)
+  }, []);
+
+  return <FilterableProductTable defaultProducts={products} productsLength={products.length} />;
 }
